@@ -31,7 +31,7 @@ public class Bird {
     /**
      * A variable (in this context, often referred to as a field), which represents the age of the bird.
      */
-    public int ageMonths;
+    public static int ageMonths;
 
     /**
      * A constructor for the bird class: this method allows us to build a new bird with the 'new' keyword.
@@ -45,7 +45,12 @@ public class Bird {
      *         greater than or equal to 3.
      */
     public String sound(){
-        return "";
+        if( Bird.ageMonths < 3){
+            return "Tweet";
+        }
+        if (Bird.ageMonths >= 3){
+            return "Chirp";
+        }
+        return null;
     }
-
 }
